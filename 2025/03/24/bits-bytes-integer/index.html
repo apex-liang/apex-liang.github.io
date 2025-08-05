@@ -14,7 +14,7 @@
 <meta property="og:description" content="本节主要对应CMU15-213的第一节与第二节课程，链接为：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1iW411d7hd?spm_id_from&#x3D;333.788.videopod.episodes&amp;vd_source&#x3D;1a4a1f38e2b5b822ffa85512f545bd0e&amp;p&#x3D;2">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-03-24T15:21:42.000Z">
-<meta property="article:modified_time" content="2025-03-24T15:43:13.412Z">
+<meta property="article:modified_time" content="2025-03-25T11:06:46.110Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -100,9 +100,9 @@
 
 <p>相信大家在学习计算机之前都听说过，计算机是0 1的世界，本节就围绕着由0 1组成的数展开，让我们仔细探究从十进制到二进制发生了什么。</p>
 <h2 id="二进制——十进制"><a href="#二进制——十进制" class="headerlink" title="二进制——十进制"></a>二进制——十进制</h2><h3 id="为什么需要二进制"><a href="#为什么需要二进制" class="headerlink" title="为什么需要二进制"></a>为什么需要二进制</h3><p>在日常生活中，我们使用十进制，但是十进制十分不利于传输。假设电路的工作电压为1.1V，那么要表示十进制数，需要将1.1V分为9份，设定门限将电压值分为十份，当电压存在于区域x中时，认为此刻存储&#x2F;传输的数据为x，如下图所示。</p>
-<p>而学过模拟电子电路的同学们知道，电路中一定存在噪声，噪声会导致电压值发生改变，这个时候如果噪声使得电压发生了一点扰动就极有可能使得计算机认为此刻传输&#x2F;存储的值为x-1或x+1，从而出现错误。</p>
-<p>使用二进制则显著提升了噪声容限，使得错误率大大降低。</p>
-<h3 id="二进制与十进制的转换"><a href="#二进制与十进制的转换" class="headerlink" title="二进制与十进制的转换"></a>二进制与十进制的转换</h3><p>（二进制、十进制、十六进制）</p>
+<p>而学过模拟电子电路的同学们知道，电路中一定存在噪声，噪声会导致电压值发生改变。假设计算机A给计算机B发送数字8，这个时候如果噪声使得电压0.1V的扰动就会使得计算机B认为此刻传输7或者9，从而出现错误。</p>
+<p>使用二进制则显著提升了噪声容限，使得错误率大大降低。假设电路的工作电压仍然为1.1V，这时则只需要一个门限来确定传输数值为0或者1。假设计算机A给计算机B传输数字0，假定门限取0.55V，那么A传输电压为0V，受到噪声的影响使得计算机B收到的电压变为0.1V，但是0.1V仍然小于0.55V，此时B认为A传输的数据仍然为0，没有发生传输错误。</p>
+<h3 id="二进制与十进制的转换"><a href="#二进制与十进制的转换" class="headerlink" title="二进制与十进制的转换"></a>二进制与十进制的转换</h3><p>在高中数学中，有提到十进制与二进制的转换，从十进制到二进制使用除二取余法，从二进制到十进制则只需按照下列公式计算<br>$$<br>O&#x3D;\Sigma_{i&#x3D;1}^{n}<br>$$<br>十六进制与十进制的转换也可以仿照上述方法，或者使用二进制作为媒介。十进制转十六进制，则先将十进制转换为二进制，再将二进制转换为十六进制。例如<code>43</code>转为2进制为<code>101011</code>，再每四位为一组，</p>
 <h2 id="布尔代数"><a href="#布尔代数" class="headerlink" title="布尔代数"></a>布尔代数</h2>
       
     </div>
@@ -116,6 +116,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2025/03/25/float/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          float
+        
+      </div>
+    </a>
   
   
     <a href="/2025/03/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -145,7 +154,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/04/">April 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li></ul>
     </div>
   </div>
 
@@ -156,6 +165,18 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2025/04/14/Machine-learning/">Machine_learning</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/26/Machine-level-programming/">Machine_level_programming</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/25/float/">float</a>
+          </li>
         
           <li>
             <a href="/2025/03/24/bits-bytes-integer/">bits-bytes-integer</a>
